@@ -1,0 +1,13 @@
+var fs=require('fs')
+fs.writeFileSync("hello.txt","good morning")
+fs.appendFileSync("hello1.txt","it is warm day")
+var data=fs.readFileSync("hello.txt")
+console.log(data)
+console.log(data.toString())
+var data=fs.readFileSync("hello.txt","UTF-8")
+console.log(data)
+fs.renameSync('hello.txt','T1.txt')
+fs.unlinkSync('hello1.txt')
+
+
+
