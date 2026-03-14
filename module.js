@@ -9,5 +9,3 @@ console.log(data)
 fs.renameSync('hello.txt','T1.txt')
 fs.unlinkSync('hello1.txt')
 
-
-
