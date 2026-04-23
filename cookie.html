@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="setCookie()">Set Cookie</button>
+<button onclick="getCookie()">Get Cookie</button>
+
+<script>
+function setCookie() {
+  document.cookie = "user=John; path=/";
+  alert("Cookie set!");
+}
+
+function getCookie() {
+  alert(document.cookie);
+}
+</script>
+
+</body>
+</html>
