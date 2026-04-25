@@ -1,15 +1,20 @@
-expr = require("express")
-app = expr()
-app.use(expr.urlencoded({ extended: true }))
-app.get('/', (req, res) => {
-    res.send(`<form action="/data" method="post">
-        username:<input type='text' name='uname'>
-        <input type='submit'></form>`)
+expr=require('express')
+app=expr()
+const mvi=[{'id':'101','name':'Don-1','year':2009},
+{'id':'102','name':'Don-2','year':2012},
+{'id':'103','name':'Don-3','year':2007}]
+app.get('/m',(req,res)=>{
+    res.json(mvi)
 })
-app.post('/data', (req, res) => {
-    uname = req.body.uname
-    res.send(`welcome ${uname}`)
+app.get('/m/:id',(req,res)=>{
+    data=mvi.filter((a)=>a.id==req.params.id)
+    if(data.length>0){
+        res.json(mvi[0])
+    }
+    else{
+        res.send("no data found")
+    }
 })
-app.listen(5623,()=>{
-    console.log('server started')
-    })
+app.listen(5555,()=>{
+    console.log("server started")
+})
