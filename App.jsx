@@ -3,40 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-// import CN from './CN'
- import CN from './CN2'
- import Mapf from './Mapf'
- import OC from './OC'
-
-// function App() {
-//  let x="pqr"
-
-//   return (
-//     <>
-//     <CN name="abc" age="23"></CN>
-//     <CN name={x} age={23}></CN>
-//       </>
-//   )
-// }
-
-// export default App
-
-
+import Oc from './Oc'
+import Products from "./Products";
 
 function App() {
-
-
   return (
-    <>
-    <OC/>
-    
-      </>
-  )
+    <div>
+      <h1>Product Store</h1>
+
+      <Products />
+    </div>
+  );
 }
 
-
-export default App
-
-
-
-
+export default App;
